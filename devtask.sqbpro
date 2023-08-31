@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/home/alexandre/cursos/TDD/devtask.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1198"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,9:mainhistorico"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">CREATE TABLE tasks (
+	id	INTEGER UNIQUE,
+	titulo	varchar(100) NOT NULL,
+	descricao	TEXT NOT NULL,
+	estimativa	INTEGER NOT NULL,
+	data_criacao	date DEFAULT CURRENT_DATE,
+	data_entrega	date
+);
+
+CREATE TABLE historico(
+    id integer PRIMARY KEY AUTOINCREMENT,
+    task_id varchar(45) references tasks(id),
+    texto TEXT NOT NULL,
+    data date DEFAULT CURRENT_DATE
+    )</sql><current_tab id="0"/></tab_sql></sqlb_project>

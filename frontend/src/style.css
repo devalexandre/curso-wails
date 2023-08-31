@@ -1,0 +1,11 @@
+html {
+    background-color: #ffffff;
+    text-align: center;
+    color: #000000;
+}
+
+
+#app {
+    height: 100vh;
+    text-align: center;
+}
